@@ -23,3 +23,20 @@ def get_user_choice(value_user):
 #b = get_user_choice(a)
 #print(b)
 
+import random
+def get_computer_choice():
+    """
+    This function will generate a random number and convert it into a defined string value
+    :return: str
+    """
+    random_number = random.randint(0, 2)
+    if random_number == 0:
+        return 'Rock'
+    elif random_number == 1:
+        return 'Paper'
+    else:
+        return 'Scissors'
+
+#a = get_computer_choice()
+#print(a)
+
