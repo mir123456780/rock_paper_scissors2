@@ -1,0 +1,4 @@
+[0, 3]
+The user score 0 and the computer score 1
+You have played 2 games. The user score 1 and the computer score 0
+You have played 6 games. The user score 0 and the computer score 2
