@@ -18,10 +18,7 @@ def get_user_choice(value_user):
     else:
         return get_user_choice(value_user)
 
-#Test: to find the user choice
-#a = input("Please select your choice using (R, P or S)")
-#b = get_user_choice(a)
-#print(b)
+
 
 import random
 def get_computer_choice():
@@ -37,6 +34,28 @@ def get_computer_choice():
     else:
         return 'Scissors'
 
-#a = get_computer_choice()
-#print(a)
+
+winning_cases = {"Rock":"Scissors", "Paper":"Rock", "Scissors":"Paper"}
+
+def select_winner(user_choice, computer_choice):
+    """
+    This function gets the choice of the user and the computer and decides who is the winner
+    :param: string
+    :return: str
+    """
+
+    if user_choice==computer_choice:
+        return "draw"
+    elif winning_cases[user_choice]==computer_choice:
+        return "user"
+    else:
+        return "computer"
+
+#Test: to find the user choice
+user_input = input("Please select your choice using (R, P or S)")
+user_choice = get_user_choice(user_input)
+computer_choice = get_computer_choice()
+print(f"The user selected {user_choice} and the computer selected {computer_choice}")
+result = select_winner(user_choice,computer_choice)
+print(f"The winner is: {result}")
 
