@@ -1,3 +1,4 @@
+#This file was created after the game has ended. It gets the scores from a list and appends them to the file.
 [0, 3]
 The user score 0 and the computer score 1
 You have played 2 games. The user score 1 and the computer score 0

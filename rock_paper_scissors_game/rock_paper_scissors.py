@@ -1,8 +1,7 @@
 from rock_paper_scissors_game.module_all_games import get_score, play_again, write_file
 
-
 #These are the rock, paper, scissor functions
-
+#This function will get the user's choice of action.
 def get_user_choice(value_user):
     """
     This function will return the user's action choice (rock, paper or scissors) made my the user.
@@ -24,6 +23,7 @@ def get_user_choice(value_user):
 
 
 import random
+#This function will get the computer's random choice using the random module.
 def get_computer_choice():
     """
     This function will generate a random number and convert it into a defined string value
@@ -37,9 +37,10 @@ def get_computer_choice():
     else:
         return 'Scissors'
 
-
+#This is a dictionary. The first key is the winning element. The value is the loser.
 winning_cases = {"Rock":"Scissors", "Paper":"Rock", "Scissors":"Paper"}
 
+#This function will select the winner from the choice of the computer and the user. Then it compares the choices and selects the winner.
 def select_winner(user_choice, computer_choice):
     """
     This function gets the choice of the user and the computer and decides who is the winner
@@ -53,7 +54,7 @@ def select_winner(user_choice, computer_choice):
     else:
         return "computer"
 
-
+#This function tests the functions.
 def main():
     score = [0, 0]
     count = 0
@@ -72,6 +73,7 @@ def main():
             write_file(f"You have played {count} games. The user score {score[0]} and the computer score {score[1]}")
             exit()
 
+#Main will only run if called from main.
 if __name__ == "__main__":
     main()
 
